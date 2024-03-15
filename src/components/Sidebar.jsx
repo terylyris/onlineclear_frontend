@@ -1,14 +1,14 @@
 import React from 'react'
 
-function Sidebar() {
+function Sidebar({selectItem}) {
   return (
     <div className='h-full bg-blue-500 text-white flex flex-col justify-center gap-4 w-1/6'>
-      <button>Dashboard</button>
-      <button>Faculty</button>
-      <button>Library</button>
-      <button>Student Affairs</button>
-      <button>Finance</button>
-      <button>Registrar</button>
+      <button onClick={() => selectItem('Dashboard')}>Dashboard</button>
+      <button onClick={() => selectItem('Faculty')}>Faculty</button>
+      <button onClick={() => selectItem('Library')}>Library</button>
+      <button onClick={() => selectItem('StudentAffairs')}>Student Affairs</button>
+      <button onClick={() => selectItem('Finance')}>Finance</button>
+      <button onClick={() => selectItem('Registrar')}>Registrar</button>
       <button>Log Out</button>
     </div>
   )
