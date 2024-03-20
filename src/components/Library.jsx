@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Library() {
   const [checked, setchecked] = useState(false)
@@ -11,10 +11,6 @@ function Library() {
       <div className='w-full items-center md:my-6 md:px-3 flex flex-row  justify-around  md:justify-evenly'>
         <p>bookreturned</p>
         <button className='font-semibold py-2 bg-blue-500 rounded-md text-white px-6'>Check</button>
-      </div>
-      <div className='w-full  items-center md:my-6 md:px-3 flex flex-row  md:justify-evenly justify-around'>
-        <p>Passmark</p>
-        <button className='font-semibold py-2 md:py-3  bg-blue-500 rounded-md text-white px-6'>Check</button>
       </div>
       <div className='w-full justify-center flex mt-5'>
         {checked? <div className='bg-green-500 font-semibold w-fit px-6 py-3 rounded-md text-white'>Successfull</div> : <div className='bg-red-500 font-semibold w-fit px-6 py-3 rounded-md text-white'>

@@ -16,7 +16,7 @@ function Homepage() {
     }
   return (
     <div className='w-screen h-screen flex flex-col' >
-      <Navbar/>
+      <Navbar onselectItem={selectItem} />
       <div className='flex-1 flex flex-row bg-gray-100'>
          <Sidebar selectItem={selectItem} />
          <div className='md:w-5/6 w-full'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function StudentAffairs() {
   const [checked, setchecked] = useState(false)
