@@ -5,6 +5,7 @@ import { VscError } from "react-icons/vsc";
 
 function Navbar({onselectItem}) {
   const [hidden, setHidden] = useState(true)
+  const name= localStorage.getItem("name").split(" ")[0]
   const handleItemClick =(item)=>{
     onselectItem(item)
     setHidden(prev=>!prev)
@@ -25,7 +26,7 @@ function Navbar({onselectItem}) {
       <div>
         <p className='font-semibold flex-row flex gap-2 divide-x-2'>
         <IoPersonSharp size={24}/>
-           Hi, Terry
+           Hi, {name}
         </p>
       </div>
     </div>

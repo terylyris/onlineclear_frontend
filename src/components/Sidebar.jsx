@@ -9,7 +9,7 @@ function Sidebar({selectItem}) {
       <button onClick={() => selectItem('StudentAffairs')}>Student Affairs</button>
       <button onClick={() => selectItem('Finance')}>Finance</button>
       <button onClick={() => selectItem('Registrar')}>Registrar</button>
-      <button>Log Out</button>
+      <button onClick={()=> window.location.replace("/Login")}>Log Out</button>
     </div>
   )
 }

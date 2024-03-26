@@ -20,7 +20,7 @@ function Homepage() {
       <div className='flex-1 flex flex-row bg-gray-100'>
          <Sidebar selectItem={selectItem} />
          <div className='md:w-5/6 w-full'>
-            {selectedItem === 'Dashboard' && <Dashboard/>}
+            {selectedItem === 'Dashboard' && <Dashboard selectItem={selectItem}/>}
             {selectedItem === 'Faculty' && <Faculty/>}
             {selectedItem === 'Finance' && <Finance/>}
             {selectedItem === 'Library' && <Library/>}
