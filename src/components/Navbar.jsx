@@ -37,7 +37,10 @@ function Navbar({onselectItem}) {
       <li onClick={()=>handleItemClick('StudentAffairs')}>Student Affairs</li>
       <li onClick={()=>handleItemClick('Finance')}>Finance</li>
       <li onClick={()=>handleItemClick('Registrar')}>Registrar</li>
-      <li onClick={()=>window.location.replace("/Login")}>Log Out</li>
+      <li onClick={()=> {
+        localStorage.removeItem("userid");
+        window.location.reload()
+    }}>Log Out</li>
     </ul>
     </div>
   )

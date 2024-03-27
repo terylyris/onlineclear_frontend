@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 function Login() {
@@ -16,7 +18,7 @@ function Login() {
       const formData = new FormData();
       formData.append('regno', regNo);
       formData.append('password', password);
-  
+      toast.warn('Loging in...')
       const response = await fetch("https://online-clear.onrender.com/student/login/", {
         method: "POST",
         body: formData
@@ -24,6 +26,7 @@ function Login() {
   
       if (!response.ok) {
         throw new Error('Failed to login');
+        toast.error('Invalid credentials')
       }
       console.log(response.status)
       const data = await response.json();
@@ -34,17 +37,25 @@ function Login() {
       console.log(localStorage.getItem("name"))
       console.log(localStorage.getItem("userid"))
       console.log(localStorage.getItem("regno"))
-      window.location.href = '/'
+      toast.success('Success redirecting...')
+      PushDelay()
+      
     } catch (error) {
       console.error('Login error:', error.message);
+      toast.error('An error occured check credentials')
       // Handle error (e.g., display error message to user)
     }
+  }
+  const PushDelay = ()=>{
+    setTimeout(()=>{
+      window.location.href = '/'
+    }, 2000)
   }
   
 
   return (
     <div className='bg-gray-200 h-screen w-screen flex justify-center items-center'>
-
+      <ToastContainer/>
       <div className='w-[60vw] max-w-[350px] '>
         <h1 className='text-blue-500 text-2xl font-semibold mb-6 w-full text-center'>Please Log in</h1>
         <form onSubmit={handleLogin} className='p-2 '>
