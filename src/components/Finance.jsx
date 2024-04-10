@@ -33,10 +33,7 @@ function Finance() {
           ) : (
             <button
               onClick={checkBalance}
-              className="font-semibold py-2 bg-blue-500 rounded-md text-white px-6"
-            >
-              Check
-            </button>
+              className='font-semibold py-2 bg-red-500 rounded-md text-white px-6'>Not cleared</button>
           )}
         </div>
         <div className="w-full justify-center flex mt-5">

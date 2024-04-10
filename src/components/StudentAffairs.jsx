@@ -45,19 +45,19 @@ function StudentAffairs() {
       <div className='w-full items-center md:my-6 md:px-3 flex flex-row  justify-around  md:justify-evenly'>
         <p>DeansOffice</p>
         {
-          checked ? <button onClick={checkDean} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkDean} className='font-semibold py-2 bg-blue-500 rounded-md text-white px-6'>Check</button>
+          checked ? <button onClick={checkDean} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkDean} className='font-semibold py-2 bg-red-500 rounded-md text-white px-6'>Not cleared</button>
         }
       </div>
       <div className='w-full  items-center md:my-6 md:px-3 flex flex-row  md:justify-evenly justify-around'>
         <p>Hostel</p>
         {
-          hostel ? <button onClick={checkHostel} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkHostel} className='font-semibold py-2 bg-blue-500 rounded-md text-white px-6'>Check</button>
+          hostel ? <button onClick={checkHostel} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkHostel} className='font-semibold py-2 bg-red-500 rounded-md text-white px-6'>Not cleared</button>
         }
       </div>
       <div className='w-full  items-center md:my-6 md:px-3 flex flex-row  md:justify-evenly justify-around'>
         <p>Games</p>
         {
-          games ? <button onClick={checkGames} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkGames} className='font-semibold py-2 bg-blue-500 rounded-md text-white px-6'>Check</button>
+          games ? <button onClick={checkGames} className='font-semibold py-2 bg-green-500 rounded-md text-white px-6'>Check</button>:<button onClick={checkGames} className='font-semibold py-2 bg-red-500 rounded-md text-white px-6'>Not cleared</button>
         } 
       </div>
       <div className='w-full justify-center flex mt-5'>
@@ -65,7 +65,7 @@ function StudentAffairs() {
           Failed
           </div>}
       </div>
-      </div>
+      </div> 
       <div className='flex  flex-row justify-center items-center '>
      <img width={400}  src="image.jpeg" alt="image" /></div>
       
